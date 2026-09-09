@@ -4,7 +4,9 @@ const formHandler = require("./handlers/form-handler");
 const dataHandler = require("./handlers/data-handler");
 const exportHandler = require("./handlers/export-handler");
 
-// Menu.setApplicationMenu(null); // Disable the default menu bar
+if (require("electron-squirrel-startup")) return;
+
+Menu.setApplicationMenu(null); // Disable the default menu bar
 
 function createWindow() {
 	const win = new BrowserWindow({
