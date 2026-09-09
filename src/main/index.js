@@ -9,6 +9,12 @@ const formHandler = require("./handlers/form-handler");
 const dataHandler = require("./handlers/data-handler");
 const exportHandler = require("./handlers/export-handler");
 
+console.log("isPackaged:", app.isPackaged);
+console.log("appPath:", app.getAppPath());
+console.log("resourcesPath:", process.resourcesPath);
+console.log("userData:", app.getPath("userData"));
+console.log("cwd:", process.cwd());
+
 // if (handleSquirrelEvent()) {
 // 	// squirrel event handled and app will exit in 1000ms, so don't do anything else
 // 	return;

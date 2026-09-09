@@ -1,4 +1,4 @@
-const { ipcMain } = require("electron");
+const { app, ipcMain } = require("electron");
 const path = require("path");
 const dataHandler = require("./data-handler");
 const nodemailer = require("nodemailer");
@@ -72,7 +72,7 @@ async function generateICS(data) {
 	return dataHandler
 		.writeData(calendar, "calendar.ics")
 		.then(() => {
-			return path.join(__dirname, "../../../userData/calendar.ics");
+			return path.join(app.getPath("userData"), "userData/calendar.ics");
 		})
 		.catch((error) => {
 			console.error("Error writing ICS file:", error);
