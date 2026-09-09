@@ -2,7 +2,7 @@ const { app, ipcMain } = require("electron");
 const fs = require("fs");
 const path = require("path");
 
-const userDataPath = path.join(__dirname, "../../../userData");
+const userDataPath = path.join(app.getPath("exe"), "userData");
 
 ipcMain.handle("load-data", async () => {
 	const data = readData("output.json");
