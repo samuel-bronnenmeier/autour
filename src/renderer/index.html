@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'" />
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'" />
+		<title>AuTour</title>
+		<link rel="stylesheet" href="../assets/index.css" />
+	</head>
+	<body>
+		<h1>AuTour - Einmal eintragen, der Rest passiert automatisch</h1>
+		<button id="copyMailButton">E-Mail kopieren</button>
+		<p id="recommendedEmail">
+			Empfohlene E-Mail: <br />
+			<span id="emailValue">(keine Eingabe)</span>
+		</p>
+
+		<button id="loadDataButton">Daten letzter Session laden</button>
+
+		<form action="#" id="submitForm">
+			<input type="submit" value="Speichern und E-Mail generieren" />
+		</form>
+
+		<button type="button" id="exportCSVButton">
+			iCal-Datei exportieren
+		</button>
+
+		<button type="button" id="addFieldsetButton">
+			Weitere Führung hinzufügen
+		</button>
+	</body>
+	<script src="./components/submitButton.js"></script>
+	<script src="./components/loadButton.js"></script>
+	<script src="./components/fieldset.js"></script>
+	<script src="./components/copyMailButton.js"></script>
+	<script src="./components/exportCSVButton.js"></script>
+	<script src="./utils/organizeData.js"></script>
+	<script src="./main.js"></script>
+</html>
