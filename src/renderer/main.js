@@ -22,3 +22,6 @@ addFieldsetButton.addEventListener("click", () => {
 
 const copyMailButton = document.getElementById("copyMailButton");
 copyMailButton.addEventListener("click", copyMailToClipboard);
+
+const spawnSettingsButton = document.getElementById("spawnSettingsButton");
+spawnSettingsButton.addEventListener("click", spawnSettingsWindow);

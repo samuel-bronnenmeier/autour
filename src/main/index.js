@@ -21,6 +21,19 @@ function createWindow() {
 	});
 
 	win.loadFile(path.join(__dirname, "../renderer/index.html"));
+
+	win.webContents.setWindowOpenHandler(({ url }) => {
+		if (url === "about:blank") {
+			return {
+				action: "allow",
+				overrideBrowserWindowOptions: {
+					width: 400,
+					height: 300,
+				},
+			};
+		}
+		return { action: "deny" };
+	});
 }
 
 app.whenReady().then(() => {
