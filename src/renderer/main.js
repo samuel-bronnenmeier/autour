@@ -24,4 +24,7 @@ const copyMailButton = document.getElementById("copyMailButton");
 copyMailButton.addEventListener("click", copyMailToClipboard);
 
 const spawnSettingsButton = document.getElementById("spawnSettingsButton");
-spawnSettingsButton.addEventListener("click", spawnSettingsWindow);
+spawnSettingsButton.addEventListener("click", async () => {
+	const oldAuth = await window.utils.getUserAuth();
+	spawnSettingsWindow(oldAuth.email, oldAuth.password);
+});

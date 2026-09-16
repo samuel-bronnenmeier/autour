@@ -5,5 +5,7 @@ process.once("loaded", () => {
 		sendForm: (data) => ipcRenderer.invoke("form-submission", data),
 		loadData: () => ipcRenderer.invoke("load-data"),
 		exportICS: (data) => ipcRenderer.invoke("export-ics", data),
+		setUserAuth: (auth) => ipcRenderer.invoke("set-user-auth", auth),
+		getUserAuth: () => ipcRenderer.invoke("get-user-auth"),
 	});
 });

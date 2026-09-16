@@ -8,6 +8,7 @@ const path = require("path");
 const formHandler = require("./handlers/form-handler");
 const dataHandler = require("./handlers/data-handler");
 const exportHandler = require("./handlers/export-handler");
+const authHandler = require("./handlers/auth-handler");
 
 Menu.setApplicationMenu(null); // Disable the default menu bar
 

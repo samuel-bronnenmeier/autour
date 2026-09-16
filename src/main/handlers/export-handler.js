@@ -4,37 +4,40 @@ const dataHandler = require("./data-handler");
 const nodemailer = require("nodemailer");
 
 ipcMain.handle("export-ics", async (event, data) => {
-	if (
-		process.env.EMAIL_USER === undefined ||
-		process.env.EMAIL_PASS === undefined
-	) {
+	const userAuth = await dataHandler.readData("userAuth.json");
+	if (userAuth.email === undefined || userAuth.password === undefined) {
 		console.error(
-			"Email credentials are not set in environment variables.",
+			"Email credentials are not set the userDate/userAuth.json file.",
 		);
-		process.env.EMAIL_USER = "samuelbronnenmeier@gmail.com";
-		process.env.EMAIL_PASS = "jtbj watq rnyd ghux";
 	}
 	return await sendEmailWithAttachment(
-		process.env.EMAIL_USER,
+		userAuth.email,
 		"Eingetragene Termine",
 		"Gesendet von " +
-			process.env.EMAIL_USER +
+			userAuth.email +
 			". Im Anhang die ICS-Datei. Einfach auf einem Gerät mit Zugang zum Kalender öffnen.",
 		generateICS(data),
+		userAuth.password,
 	);
 });
 
-async function sendEmailWithAttachment(to, subject, body, attachmentPath) {
+async function sendEmailWithAttachment(
+	to,
+	subject,
+	body,
+	attachmentPath,
+	password,
+) {
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
-			user: process.env.EMAIL_USER,
-			pass: process.env.EMAIL_PASS,
+			user: to,
+			pass: password,
 		},
 	});
 
 	const mailOptions = {
-		from: process.env.EMAIL_USER,
+		from: to,
 		to: to,
 		subject: subject,
 		text: body,
