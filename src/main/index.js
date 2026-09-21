@@ -29,7 +29,7 @@ function createWindow() {
 				action: "allow",
 				overrideBrowserWindowOptions: {
 					width: 400,
-					height: 300,
+					height: 350,
 				},
 			};
 		}
