@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 module.exports = {
 	packagerConfig: {
 		asar: true,
@@ -33,7 +31,6 @@ module.exports = {
 				},
 				prerelease: false,
 				draft: true,
-				authToken: process.env.GITHUB_TOKEN,
 			},
 		},
 	],

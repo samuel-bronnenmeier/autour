@@ -16,4 +16,6 @@ jobs:
                   node-version: 20
                   cache: npm
             - run: npm install
+              env:
+                  GITHUB_TOKEN: ${{ secrets.OTHER_GITHUB_TOKEN }}
             - run: npm run publish
