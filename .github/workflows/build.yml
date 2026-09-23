@@ -10,7 +10,5 @@ jobs:
     publish:
         runs-on: windows-latest
         steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
             - run: npm install
             - run: npm run publish
