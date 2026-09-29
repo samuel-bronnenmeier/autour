@@ -1,4 +1,5 @@
-require("update-electron-app")();
+const { updateElectronApp } = require("update-electron-app");
+updateElectronApp();
 
 const { app, BrowserWindow, Menu } = require("electron");
 
