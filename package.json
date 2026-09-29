@@ -1,11 +1,15 @@
 {
 	"name": "autour",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Zoo guide tours automatically distributed",
 	"license": "ISC",
 	"author": "Samuel Bronnenmeier",
 	"type": "commonjs",
 	"main": "./src/main/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/samuel-bronnenmeier/autour.git"
+	},
 	"scripts": {
 		"start": "electron-forge start",
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +34,7 @@
 		"csv-writer": "^1.6.0",
 		"dotenv": "^18.0.2",
 		"electron-squirrel-startup": "^1.0.1",
-		"nodemailer": "^9.0.3"
+		"nodemailer": "^9.0.3",
+		"update-electron-app": "^3.3.0"
 	}
 }
