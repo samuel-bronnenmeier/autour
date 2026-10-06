@@ -15,6 +15,8 @@ const authHandler = require("./handlers/auth-handler");
 
 Menu.setApplicationMenu(null); // Disable the default menu bar
 
+app.commandLine.appendSwitch("lang", "de-DE"); // Set the language to German
+
 function createWindow() {
 	const win = new BrowserWindow({
 		width: 800,
