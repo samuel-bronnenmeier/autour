@@ -13,7 +13,7 @@ const dataHandler = require("./handlers/data-handler");
 const exportHandler = require("./handlers/export-handler");
 const authHandler = require("./handlers/auth-handler");
 
-Menu.setApplicationMenu(null); // Disable the default menu bar
+// Menu.setApplicationMenu(null); // Disable the default menu bar
 
 app.commandLine.appendSwitch("lang", "de-DE"); // Set the language to German
 

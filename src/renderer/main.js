@@ -28,3 +28,10 @@ spawnSettingsButton.addEventListener("click", async () => {
 	const oldAuth = await window.utils.getUserAuth();
 	spawnSettingsWindow(oldAuth.email, oldAuth.password);
 });
+
+const panels = document.querySelectorAll(".description");
+panels.forEach((panel) => {
+	panel.addEventListener("click", () => {
+		panel.classList.toggle("description-closed");
+	});
+});
