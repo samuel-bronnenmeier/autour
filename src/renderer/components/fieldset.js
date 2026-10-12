@@ -9,45 +9,57 @@ function createFieldset(fieldsetCount) {
 	fieldset.appendChild(legend);
 
 	// Helper function to create input elements
-	const createInput = (type, name, idSuffix, required = false) => {
+	const createInput = (
+		type,
+		name,
+		idSuffix,
+		required = false,
+		cssClass = "full",
+	) => {
 		const input = document.createElement("input");
 		input.type = type;
 		input.name = name + `${fieldsetCount + 1}`;
 		input.id = `${idSuffix}${fieldsetCount + 1}`;
 		if (required) input.required = true;
+		input.classList.add(cssClass);
 		return input;
 	};
 
 	// Helper function to create label elements
-	const createLabel = (text, forId) => {
+	const createLabel = (text, forId, cssClass = "full") => {
 		const label = document.createElement("label");
 		label.textContent = text;
 		label.htmlFor = forId;
+		label.classList.add(cssClass);
 		return label;
 	};
 
 	// Create inputs and labels dynamically
-	fieldset.appendChild(createLabel("Datum:", "date"));
-	fieldset.appendChild(createInput("date", "date", "date", true));
+	fieldset.appendChild(createLabel("Datum:", "date", "half"));
+	fieldset.appendChild(createInput("date", "date", "date", true, "half"));
 
-	fieldset.appendChild(createLabel("Startzeit:", "start-time"));
-	fieldset.appendChild(createInput("time", "start-time", "start-time", true));
+	fieldset.appendChild(createLabel("Startzeit:", "start-time", "half"));
+	fieldset.appendChild(
+		createInput("time", "start-time", "start-time", true, "half"),
+	);
 
-	fieldset.appendChild(createLabel("Dauer:", "duration"));
-	fieldset.appendChild(createInput("number", "duration", "duration", true));
+	fieldset.appendChild(createLabel("Dauer:", "duration", "half"));
+	fieldset.appendChild(
+		createInput("number", "duration", "duration", true, "half"),
+	);
 	fieldset.querySelector(`input[name="duration${fieldsetCount + 1}"]`).step =
 		0.5;
 
-	fieldset.appendChild(createLabel("Art:", "spec"));
-	fieldset.appendChild(createInput("text", "spec", "spec", true));
+	fieldset.appendChild(createLabel("Art:", "spec", "half"));
+	fieldset.appendChild(createInput("text", "spec", "spec", true, "half"));
 
-	fieldset.appendChild(createLabel("Personenanzahl:", "personCount"));
+	fieldset.appendChild(createLabel("Personenanzahl:", "personCount", "half"));
 	fieldset.appendChild(
-		createInput("number", "personCount", "personCount", true),
+		createInput("number", "personCount", "personCount", true, "half"),
 	);
 
-	fieldset.appendChild(createLabel("Alter:", "age"));
-	fieldset.appendChild(createInput("number", "age", "age", true));
+	fieldset.appendChild(createLabel("Alter:", "age", "half"));
+	fieldset.appendChild(createInput("number", "age", "age", true, "half"));
 
 	fieldset.appendChild(createLabel("Thema/Lieblingstier:", "theme"));
 	fieldset.appendChild(createInput("text", "theme", "theme", true));
@@ -57,6 +69,7 @@ function createFieldset(fieldsetCount) {
 	select.name = "starting-point" + `${fieldsetCount + 1}`;
 	select.id = `starting-point${fieldsetCount + 1}`;
 	select.required = true;
+	select.classList.add("full");
 
 	const optionKasse = document.createElement("option");
 	optionKasse.value = "Kasse";

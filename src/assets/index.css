@@ -82,21 +82,34 @@ h1 {
 
 fieldset {
 	display: grid;
-	grid-template-columns: [labels] auto [controls] 1fr;
+	grid-template-columns: [labels1] auto [controls1] 1fr [labels2] auto [controls2] 1fr;
 	grid-gap: 1rem;
 	grid-auto-flow: row;
 }
 
 fieldset label {
-	grid-column: labels;
 	align-self: right;
 	justify-self: end;
 }
 
-fieldset input,
-fieldset select,
-fieldset textarea {
-	grid-column: controls;
+fieldset label.full {
+	grid-column: labels1;
+}
+
+fieldset label.half {
+	grid-column: span 1;
+}
+
+fieldset input.full,
+fieldset select.full,
+fieldset textarea.full {
+	grid-column: controls1 / span 3;
+}
+
+fieldset input.half,
+fieldset select.half,
+fieldset textarea.half {
+	grid-column: span 1;
 }
 
 form fieldset {
