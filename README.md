@@ -6,7 +6,7 @@ This is a an attempt at simplifying the process of taking on tours as a tour gui
 
 ## Version 2 (in progress)
 
-Lets you import the pdfs directly once downloaded from the e-mail from your boss as a zip, so you can simply click on the tours you want to take. Automaticylly sends an e-mail to your boss and reads the answer to determine which tours you actually got to send you and e-mail with an iCal-file to import in your calendar app of choice.
+Lets you import the pdfs directly once downloaded from the e-mail from your boss as a zip, so you can simply click on the tours you want to take. Automatically sends an e-mail to your boss and reads the answer to determine which tours you actually got to send you and e-mail with an iCal-file to import in your calendar app of choice.
 
 ---
 
