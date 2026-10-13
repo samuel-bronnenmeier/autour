@@ -1,5 +1,7 @@
 # AuTour
 
+[![de](https://img.shields.io/badge/lang-de-red.svg)](https://github.com/samuel-bronnenmeier/autour/blob/master/README.de.md)
+
 ## Version 1
 
 This is a an attempt at simplifying the process of taking on tours as a tour guide, quite specifically for Zoo Augsburg, but practically for any tour guide system with asimilar structure. It lets you input the tours you want to do, automatically generates an e-mail with all important information to your boss (currently: copy the generated e-mail, paste it in your mail-program, send manually, plan: send automatically), and then when your boss answers, which tours are actually yours, it offers the possibility to load in all the tours you inputted, delete the ones you didn't get and send you an e-mail with an iCal-file, which lets you easily import it in Apple Calendar, Google Calendar or similar.
