@@ -21,7 +21,7 @@ Lets you import the pdfs directly once downloaded from the e-mail from your boss
 
 ## Installation
 
-1. Download the exe into a folder of your choice.
+1. Download the exe from the "Releases"-area into a folder of your choice.
 2. Execute the exe and dismiss warnings. The app will automatically install into default location and genereate a desktop icon for quick access.
 
 ## Workflow
