@@ -19,7 +19,7 @@ Lässt die PDF-Dateien (sobald sie als zip aus der E-Mail heruntergeladen wurden
 
 ## Installation
 
-1. Lade die .exe-Datei herunter.
+1. Lade die .exe-Datei aus dem "Veröffentlichungen"/"Releases"-Bereich herunter.
 2. Führe die Datei aus und ignoriere eventuelle Warnungen. Die App installiert sich automatisch in den Standart-Ordner und generiert ein Desktop-Icon zum schnellen Zugriff.
 
 ## Workflow
