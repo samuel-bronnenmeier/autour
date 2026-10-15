@@ -34,6 +34,9 @@ async function sendEmailWithAttachment(
 			user: to,
 			pass: password,
 		},
+		tls: {
+			rejectUnauthorized: false,
+		},
 	});
 
 	const mailOptions = {
